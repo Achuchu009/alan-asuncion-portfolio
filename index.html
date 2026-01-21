@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan I. Asuncion | Cinematic Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { --accent-red: #D21F2B; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #fff; scroll-behavior: smooth; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Cinematic Parallax Effect */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 80vh; /* Shorter than home to keep flow */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-parallax { height: 100vh; background-attachment: fixed; background-size: cover; background-position: center; }
+        
+        .overlay { background: rgba(0, 0, 0, 0.6); position: absolute; inset: 0; }
+        .red-line { width: 50px; height: 2px; background-color: var(--accent-red); margin-bottom: 1rem; }
+        
+        /* Smooth Mobile Fix */
+        @media (max-width: 768px) {
+            .parallax-bg, .hero-parallax { background-attachment: scroll; height: 60vh; }
+        }
+
+        /* Hover effect for main gallery */
+        .gallery-item img { transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .gallery-item:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: HOME -->
+    <section class="hero-parallax relative flex items-center justify-center text-center px-4" style="background-image: url('YOUR_BW_HERO_IMAGE.jpg');">
+        <div class="overlay"></div>
+        <div class="relative z-10" data-aos="fade-up" data-aos-duration="2000">
+            <img src="logo.jpg" alt="Logo" class="w-32 mx-auto mb-8">
+            <h1 class="text-5xl md:text-8xl tracking-tight mb-2">ALAN I. <span class="text-[#D21F2B]">ASUNCION</span></h1>
+            <p class="text-xl md:text-2xl font-light tracking-[0.3em] uppercase opacity-80">Professional Photographer/ Videographer</p>
+            <div class="mt-20 animate-bounce opacity-40 text-xs tracking-widest uppercase">Scroll to see the journey</div>
+        </div>
+    </section>
+
+    <!-- Page 2: THE STORY -->
+<section class="py-24 px-6 md:px-20 bg-[#050505] overflow-hidden">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
+        <!-- Image Column -->
+        <div class="relative group" data-aos="fade-right">
+            <!-- Subtle Red Decorative Box behind the image -->
+            <div class="absolute -bottom-4 -left-4 w-full h-full border border-[#D21F2B] translate-x-2 translate-y-2 opacity-30 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-700"></div>
+            
+            <!-- The Main Portrait -->
+            <img src="557604242_24962688513327914_4233822197431504051_n.jpg" alt="Alan Asuncion" class="relative z-10 w-full grayscale hover:grayscale-0 transition duration-1000 shadow-2xl object-cover aspect-[4/5]">
+            
+            <!-- Aesthetic Label -->
+            <div class="absolute top-8 right-0 z-20 bg-[#D21F2B] px-4 py-1 text-[10px] tracking-[0.3em] uppercase font-bold">
+                Est. 1991
+            </div>
+        </div>
+
+        <!-- Text Column -->
+        <div data-aos="fade-left">
+            <div class="red-line"></div> <!-- Note: mx-auto removed to keep it left-aligned -->
+            <h2 class="text-4xl md:text-6xl mb-10 serif leading-tight">Hello, I’m <span class="text-[#D21F2B]">Alan</span></h2>
+            
+            <div class="text-gray-300 text-lg leading-relaxed space-y-6 serif italic">
+                <p>
+                    "My journey started back in 1991 as a black-and-white studio photographer, where I built my foundation inside the photo lab—mastering the art of printing and analog editing before finding the rhythm of moving images as a videographer."
+                </p>
+                <p>
+                    "From grainy film to crisp digital, I’ve seen the world change, but the learning never stops. I went from attending the WPPP Photo Congress as a student to finally joining the ranks of award-winners, and the growth has been real."
+                </p>
+                <p class="text-white not-italic font-semibold border-l-2 border-[#D21F2B] pl-6 py-2">
+                    "After all these years, this is still more than just a profession to me. It is my passion."
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Page 3: MILESTONES -->
+    <section class="py-20 px-6 bg-zinc-950">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl tracking-widest uppercase mb-12 text-center text-gray-500">THE JOURNEY</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- WPPP -->
+                <div class="border-l border-zinc-800 pl-8" data-aos="fade-right">
+                    <h3 class="text-[#D21F2B] text-2xl font-bold mb-6 tracking-tighter">WPPP</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li><span class="text-white">🏅 Certified Wedding Photographer</span> (2025)</li>
+                        <li><span class="text-white">🏆 Top 4 Photographer of the Year</span> (2025/2024)</li>
+                        <li><span class="text-white">🌟 Rookie of the Year</span> (2023)</li>
+                        <li class="text-sm pt-4 italic opacity-70 border-t border-zinc-800">1st Place: First Dance, Transportation • 2nd Place: B&W, Humor, Candid • 3rd Place: Bird's Eye View</li>
+                    </ul>
+                </div>
+                <!-- MPI -->
+                <div class="border-l border-zinc-800 pl-8" data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="text-[#D21F2B] text-2xl font-bold mb-6 tracking-tighter">Mega Pixel International</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li><span class="text-white">🌍 No. 1 Outstanding Photographer of the Year</span> (2023)</li>
+                        <li><span class="text-white">🥇 Photographer of the Month</span> (Jan 2024)</li>
+                        <li><span class="text-white">🥇 Photographer of the Month</span> (Nov 2023)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 4: THE COLLECTION (Parallax Masterpieces) -->
+    <section>
+        <div class="parallax-bg" style="background-image: url('555821331_24927531926843573_6305853268926118204_n.jpg');"><div class="overlay"></div></div>
+        
+        <div class="parallax-bg" style="background-image: url('515726459_24190491160547657_6190200153917257904_n.jpg');"><div class="overlay"></div></div>
+        
+        <div class="parallax-bg" style="background-image: url('494504673_9923835787639766_3209141069955031959_n.jpg');"><div class="overlay"></div></div>
+
+        <!-- MAIN MASONRY GALLERY (For the 20-30 images) -->
+        <div class="bg-[#050505] py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-center mb-12 uppercase tracking-widest text-gray-600">Extended Collection</h3>
+                <div class="columns-1 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                    <!-- Repeat this div for all 30 photos -->
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="493979331_9880158992007446_8391837136164007113_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="1.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="499469257_10047973338559343_3156552868055015202_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="495997178_9996858000337544_4327377779571679868_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="587627577_831608166509617_7983388772727606718_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="561946265_796971366639964_7094346460988147491_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="489921687_644198771917225_1267055657569275712_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="505473380_23993836120213163_7621906751562848738_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="492740550_9880158882007457_2749116509269692195_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="504018202_23948673034729472_5578765108540370941_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="505473380_23993836120213163_7621906751562848738_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="514399877_24189030797360360_1884010108946869758_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="514912369_24189118684018238_9108997954645093027_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="514985659_24189287664001340_9112818162072724214_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="515441868_24191617563768350_2862362093295235552_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="515497153_24191573997106040_1162607991489530401_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="515510680_24190921980504575_4100864005808029091_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="515511876_24190921910504582_5331670827869499005_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="515514633_24190921850504588_2306213399595834892_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="515695177_24191617547101685_7927639955660868698_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="516110960_24189184244011682_2929554187692787126_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="518049687_24273126712284101_5395570667414425247_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="518191146_24273119618951477_1181381448976589716_n.jpg.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="518305068_24288663460730426_4109896616362941622_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="518316255_24256026203994152_6264942520125483925_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="521682647_24311624661767639_8046535065741398568_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="522644947_24367451186184986_4396383742578408744_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="524805411_24388023830794388_2922566042397360149_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="524989848_24400495582880546_5062047536593350760_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="532433175_24528243163439120_5564782950773741393_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="546421168_24779348934995207_822817342787645948_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="546479154_24779350191661748_1153487526815877026_n.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                    <div class="gallery-item overflow-hidden" data-aos="fade-up"><img src="alan-asuncion-1-1024x683.jpg" class="w-full grayscale hover:grayscale-0 transition duration-700"></div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Page 5: SERVICES -->
+    <section class="py-24 px-6 bg-zinc-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl mb-2 serif">Alan Asuncion</h2>
+            <p class="text-[#D21F2B] uppercase tracking-widest text-sm mb-12">Photo & Video Services</p>
+            
+            <div class="grid md:grid-cols-2 gap-6 text-left">
+                <div class="p-8 bg-black border border-zinc-800">
+                    <h4 class="text-xl mb-2">Events</h4>
+                    <p class="text-gray-400 text-sm">Wedding & Event Photography / Videography & Cinematic Highlights</p>
+                </div>
+                <div class="p-8 bg-black border border-zinc-800">
+                    <h4 class="text-xl mb-2">Studio</h4>
+                    <p class="text-gray-400 text-sm">Graduation, Family, & Corporate Portraits / Professional Printing</p>
+                </div>
+            </div>
+            <p class="mt-12 text-gray-500">Based in: 225 MLQ St., Purok 3 New Lower Bicutan, taguig city, Taguig, Philippines</p>
+        </div>
+    </section>
+
+    <!-- Page 6: CONNECT -->
+    <footer class="py-20 px-6 bg-black text-center">
+        <div class="red-line mx-auto"></div>
+        <h2 class="text-3xl mb-4 serif">Let's Create Memories</h2>
+        <p class="text-gray-400 max-w-md mx-auto mb-10 text-sm">Thank you for visiting. You can find more of my recent work and daily updates on my social media channels.</p>
+        
+        <div class="flex justify-center gap-8 mb-16">
+            <a href="https://www.facebook.com/alan.asuncion.92" class="hover:text-[#D21F2B] transition">FACEBOOK</a>
+            <a href="https://www.instagram.com/alaninolpi/" class="hover:text-[#D21F2B] transition">INSTAGRAM</a>
+        </div>
+        
+        <p class="text-[10px] tracking-widest text-zinc-600 uppercase">© 2026 Alan Asuncion. Captured with passion.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
